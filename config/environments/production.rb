@@ -47,6 +47,16 @@ ThirtyDayList::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'www.30daylist.com' }
+  config.action_mailer.default_url_options = { :host => '30daylist.com' }
+
+  ActionMailer::Base.smtp_settings = {
+    :tls            => true,
+    :address        => "smtp.gmail.com",
+    :port           => "587",
+    :authentication => :plain,
+    :user_name      => 'no_reply@30daylist.com',
+    :password       => ENV['GOOGLE_PASSWORD'],
+    :domain         => '30daylist.com'
+  }
 
 end
