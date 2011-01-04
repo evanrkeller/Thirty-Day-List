@@ -1,0 +1,22 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  min_messages: warning
+
+production:
+  database: thirty_day_list_production
+  <<: *common
+
+development:
+  database: thirty_day_list_development
+  <<: *common
+
+test: &test
+  database: thirty_day_list_test
+  <<: *common
+
+cucumber:
+  <<: *test
