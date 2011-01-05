@@ -286,6 +286,7 @@ margin-bottom: 2px;
 {
 position: absolute;
 top: 1.1em;
+right: 1em;
 }
 
 #menu ul li
@@ -306,7 +307,7 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-#menu ul li a.active
+#menu ul li a.current
 {
 background: #7F8400 url('../images/menuactive.gif') repeat-x top left;
 }
@@ -364,4 +365,33 @@ bottom: 1.2em;
 position: absolute;
 right: 2.0em;
 bottom: 1.2em;
+}
+
+#flash .notice {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 160px;
+  background-color: #FFF;
+  width: 50%;
+  margin: 1em auto;
+  padding: 1em;
+  border: 2px solid #626602;
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.close_button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-size: 10px;
+  color: #999;
+  font-weight: bold;
+}
+
+.close_button:hover {
+  cursor: pointer;
 }

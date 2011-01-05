@@ -7,5 +7,6 @@ class ApplicationController < ActionController::Base
   protected
 
   expose(:title) { @title || '30daylist.com' }
+  expose(:current_primary_tab) { '' }
 
 end

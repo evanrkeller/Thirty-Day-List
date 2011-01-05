@@ -16,13 +16,14 @@
           #headercontent
             %h1 30daylist.com
         #menu
-          %ul
-            %li=link_to_unless_current 'Home', root_path
-            %li=link_to_unless_current 'About', '#'
+          =generate_primary_navigation
         #menubottom
         #flash
           - flash.each do |name, msg|
-            %div(class=name)= msg
+            %div(class=name)
+              .close_button{:onclick => "$('#flash .#{name}').fadeOut(500);"}
+                Close [X]
+              = msg
         #content
           = yield
         #footer
