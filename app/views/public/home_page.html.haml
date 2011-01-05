@@ -1,6 +1,7 @@
-%h2
-  Let 30daylist.com help you manage impluse purchases.
-- unless current_user.present?
+- if current_user.present?
+  %h1
+    Welcome to 30daylist.com. Check back soon as we add the ability to create, view and track your list of wants.
+- else
   %h1
     = link_to 'Register now', new_user_registration_path
     to be one of the first to get more information.
