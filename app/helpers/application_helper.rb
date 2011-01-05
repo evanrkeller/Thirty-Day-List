@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def generate_primary_navigation
-    content_tag(:ul, nav_entries(primary_nav_fields, current_primary_tab))
+    content_tag(:ul, nav_entries(primary_nav_fields, nav_map[current_primary_tab] || current_primary_tab))
   end
 
   protected
@@ -30,4 +30,10 @@ module ApplicationHelper
     end
   end
 
+  def nav_map
+    {
+      'registrations' => 'Sign Up',
+      'sessions' => 'Sign In'
+    }
+  end
 end
