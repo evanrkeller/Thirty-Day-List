@@ -5,4 +5,4 @@ Feature: Consumer Views Home Page
 
   Scenario:
     Given I am on the home page
-    Then I should see "Register"
+    Then I should see "Sign In"

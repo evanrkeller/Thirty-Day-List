@@ -2,6 +2,9 @@ class PublicController < ApplicationController
 
   def home_page
     @current_primary_tab = 'Home'
+    if current_user.present?
+      render 'item/index'
+    end
   end
 
   protected

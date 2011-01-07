@@ -1,0 +1,8 @@
+Your List!
+
+%ul#items
+  - my_items.each do |item|
+    %li{:class => (item.created_at > 30.days.ago) ? 'waiting' : 'ready' }
+      = item.name
+      .when
+        = distance(item)

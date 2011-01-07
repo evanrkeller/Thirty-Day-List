@@ -38,6 +38,7 @@ group :development, :test do
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'delorean'
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'launchy'

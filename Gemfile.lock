@@ -44,6 +44,7 @@ GEM
     celerity (0.8.6)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
+    chronic (0.3.0)
     columnize (0.3.2)
     configuration (1.2.0)
     crack (0.1.8)
@@ -58,6 +59,8 @@ GEM
     culerity (0.2.13)
     database_cleaner (0.6.0)
     decent_exposure (1.0.0.rc3)
+    delorean (0.2.1)
+      chronic
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -163,6 +166,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   decent_exposure (= 1.0.0.rc3)
+  delorean
   devise
   factory_girl_rails
   ffaker
