@@ -1,8 +1,20 @@
-Your List!
+%h1 Welcome To Your List
 
-%ul#items
-  - my_items.each do |item|
-    %li{:class => (item.created_at > 30.days.ago) ? 'waiting' : 'ready' }
-      = item.name
-      .when
-        = distance(item)
+%p.leadin
+  Add an item to it.
+= form_for item do |f|
+  = f.label :name, 'I want'
+  = succeed '.' do
+    = f.text_field :name
+  = f.submit 'Add it to my list.'
+
+- unless my_items.blank?
+  %p Already on your list:
+  %ul#items
+    - my_items.each do |item|
+      %li{:class => (item.created_at > 30.days.ago) ? 'waiting' : 'ready' }
+        = item.name
+        .when
+          = distance(item)
+- else
+  %p Your list is empty.

@@ -27,7 +27,7 @@ color: #333333;
 p
 {
 line-height: 1.5em;
-margin-bottom: 1.0em;
+margin: 1.0em 0;
 text-align: justify;
 }
 
@@ -421,4 +421,8 @@ bottom: 1.2em;
 
 #items li:hover {
   border: 1px solid #999;
+}
+
+.leadin {
+  margin-bottom: 0;
 }
