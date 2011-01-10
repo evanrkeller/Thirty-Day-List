@@ -20,7 +20,7 @@ module ApplicationHelper
   def primary_nav_fields
     [].tap do |fields|
       fields << {:title => 'Home', :path => root_path, :order => 1}
-      fields << {:title => 'About', :path => '#', :order => 2}
+      fields << {:title => 'About', :path => about_path, :order => 2}
       if current_user.present?
         fields << {:title => 'Sign Out', :path => destroy_user_session_path, :order => 3}
       else

@@ -4,6 +4,8 @@ ThirtyDayList::Application.routes.draw do
   resources :items, :only => [:index, :new, :create]
 
   get 'privacy_policy' => 'public#privacy_policy', :as => :privacy_policy
+  get 'about' => 'public#about', :as => :about
+
   root :to => 'items#index'
 
 end

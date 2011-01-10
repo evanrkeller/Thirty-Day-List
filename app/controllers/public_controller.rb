@@ -7,6 +7,10 @@ class PublicController < ApplicationController
     end
   end
 
+  def about
+    @current_primary_tab = 'About'
+  end
+
   protected
 
   expose(:current_primary_tab) { @current_primary_tab }
